@@ -1,0 +1,53 @@
+package RahulAppiumTesting;
+
+//import java.net.*;
+
+//import org.openqa.selenium.remote.DesiredCapabilities;
+import org.testng.annotations.Test;
+
+import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.options.UiAutomator2Options;
+import io.appium.java_client.service.local.AppiumDriverLocalService;
+import io.appium.java_client.service.local.AppiumServiceBuilder;
+
+import java.io.File;
+import java.net.MalformedURLException;
+import java.net.URL;
+
+public class AppiumBasic {
+
+	AndroidDriver driver;
+
+	@Test
+	public void AppiumTest() throws MalformedURLException, InterruptedException {
+
+		// File path = new
+		// File("/opt/homebrew/lib/node_modules/appium/build/lib/main.js");
+		// AppiumServiceBuilder service = new
+		// AppiumServiceBuilder().withAppiumJS("/opt/homebrew/lib/node_modules/appium/build/lib/main.js");
+		// AppiumServiceBuilder is a class used to start the appium server automatically
+
+		///opt/homebrew/lib/node_modules/npm/npmrc 
+		AppiumDriverLocalService service = new AppiumServiceBuilder().withAppiumJS(new File("//opt//homebrew//lib//node_modules//appium//build//libs//main.js"))
+																		//withAppiumJS is the path of the appium file i.e., main.js
+		.withIPAddress("127.0.0.1")	//IP address of the appium server
+		.usingPort(4723).build();  //port number of the appium 
+		//service.start();											
+		UiAutomator2Options options = new UiAutomator2Options();
+		options.setDeviceName("RahulEmulator");
+		options.setApp("/Users/rahulbashanapelli/eclipse-workspace/Appium/AppiumTestingDemo/src/test/java/resources/ApiDemos-debug.apk");
+
+		// DesiredCapabilities capabilities = new DesiredCapabilities();
+		driver = new AndroidDriver(new URL("http://127.0.0.1:4723/"), options); // Android Driver here we will provide
+																				// the url of appium server
+		//Thread.sleep(2);
+		
+		driver.quit();	//this will quit the driver
+		
+		//service.stop();  //this method will stop the appium server
+		
+		
+
+	}
+
+}

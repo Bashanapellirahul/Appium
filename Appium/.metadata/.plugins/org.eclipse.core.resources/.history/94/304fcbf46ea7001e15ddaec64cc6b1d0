@@ -1,0 +1,9 @@
+package AppTestCase;
+
+import baseclass.BaseClass;
+
+public class LongPress extends BaseClass {
+	
+	
+
+}

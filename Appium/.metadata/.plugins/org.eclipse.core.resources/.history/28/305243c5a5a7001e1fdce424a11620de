@@ -1,0 +1,9 @@
+package AppTestCase;
+
+import org.testng.annotations.Test;
+
+public class GalleryTestCase {
+  @Test
+  public void f() {
+  }
+}

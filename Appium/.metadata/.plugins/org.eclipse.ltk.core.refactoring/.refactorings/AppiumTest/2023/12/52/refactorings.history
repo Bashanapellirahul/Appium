@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;AppiumDemo.java&apos; to &apos;AppiumTestingDemo/src/test/java/AppTestCase&apos;&#x0A;- Original project: &apos;AppiumTest&apos;&#x0A;- Destination element: &apos;AppiumTestingDemo/src/test/java/AppTestCase&apos;&#x0A;- Original element: &apos;RahulAppiumTestingDemo.AppiumTest.AppiumDemo.java&apos;" description="Copy compilation unit" destination="=AppiumTestingDemo/src\/test\/java=/test=/true=/=/optional=/true=/=/maven.pomderived=/true=/&lt;AppTestCase" element1="/src\/test\/java=/optional=/true=/=/maven.pomderived=/true=/=/test=/true=/&lt;RahulAppiumTestingDemo.AppiumTest{AppiumDemo.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1703978588947" units="1" version="1.0"/>
+</session>
