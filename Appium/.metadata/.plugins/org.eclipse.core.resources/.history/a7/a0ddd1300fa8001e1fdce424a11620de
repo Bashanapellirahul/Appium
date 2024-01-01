@@ -1,0 +1,28 @@
+package utilitiesPkg;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.remote.RemoteWebElement;
+
+import com.google.common.collect.ImmutableMap;
+
+import AppTestCase.LongPress;
+import io.appium.java_client.android.AndroidDriver;
+
+public class Utilities  {
+	
+	LongPress ob = new LongPress();
+	
+	public AndroidDriver driver;
+	
+	public void gesturesMethod() throws InterruptedException {
+		WebElement ele = driver.findElement(By.xpath("//android.widget.TextView[@text='People Names']"));
+				//To perform any gesture we should inject javascript 
+				((JavascriptExecutor) driver).executeScript("mobile: longClickGesture",	//this is for longClicke Gesture
+						ImmutableMap.of("elementId", ((RemoteWebElement) ele).getId(), "duration",2000));
+				Thread.sleep(2000);
+				
+	}
+
+}

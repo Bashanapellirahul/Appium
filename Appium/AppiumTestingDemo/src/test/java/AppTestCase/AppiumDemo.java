@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 import baseclass.BaseClass;
 import io.appium.java_client.AppiumBy;
 
-public class AppiumDemo extends BaseClass {
+public class AppiumDemo extends BaseClass {		//BaseClass is extended to use the methods in to like starting driver ,closing driver and other methods
 
 	@Test
 	public void AppiumTestDemo() throws MalformedURLException, InterruptedException {
@@ -24,9 +24,12 @@ public class AppiumDemo extends BaseClass {
 		driver.findElement(AppiumBy.xpath("//android.widget.ListView[@resource-id='android:id/list']/android.widget.LinearLayout[2]/android.widget.RelativeLayout")).click();
 		Thread.sleep(2000);
 		
-		String alertTitle = driver.findElement(By.id("android:id/alertTitle")).getText();
-		Assert.assertEquals(alertTitle, "WiFi settings");
-		System.out.println(alertTitle);
+		
+		
+		Assert.assertEquals(driver.findElement(By.id("android:id/alertTitle")).getText(), "WiFi settings");	
+		//this will check whether the title is same or not. If this is same only, other methods are executed
+		
+		
 		driver.findElement(AppiumBy.id("android:id/edit")).sendKeys("rahulWifi");
 		Thread.sleep(2000);
 		

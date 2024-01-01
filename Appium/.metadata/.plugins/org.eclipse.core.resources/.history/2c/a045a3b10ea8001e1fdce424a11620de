@@ -1,0 +1,23 @@
+package utilitiesPkg;
+
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.remote.RemoteWebElement;
+
+import com.google.common.collect.ImmutableMap;
+
+import io.appium.java_client.android.AndroidDriver;
+
+public class Utilities {
+	
+	public AndroidDriver driver;
+	
+	public void gesturesMethod() throws InterruptedException {
+		WebElement ele;
+				//To perform any gesture we should inject javascript 
+				((JavascriptExecutor) driver).executeScript("mobile: longClickGesture",	//this is for longClicke Gesture
+						ImmutableMap.of("elementId", ((RemoteWebElement) ele).getId(), "duration",2000));
+				Thread.sleep(2000);
+				
+	}
+
+}
